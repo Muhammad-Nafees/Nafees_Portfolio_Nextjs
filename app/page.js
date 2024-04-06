@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 function Home() {
 
@@ -10,8 +11,7 @@ function Home() {
          w-full
          items-center 
          justify-between
-         flex
-         "
+         flex"
         >
           <p className="text-white">
             Muhammad Nafees
@@ -24,14 +24,49 @@ function Home() {
             <li><button className="text-white rounded-md px-4 py-2 hover:bg-white hover:text-red-950 transition duration-300"> Contact</button></li>
           </ul>
 
-          <div className=" md:hidden">
+          <div className="md:hidden">
             <button>Nav</button>
           </div>
 
-
-
         </div>
       </div>
+
+      <div className="flex justify-center items-center bg-zinc-950 lg:bg-slate-950 md:bg-green-400  sm:bg-400 xl:bg-red-700">
+
+        <div className="px-10 md:flex items-center justify-between 
+      xl:w-9/12
+      md:w-10/12
+       ">
+          <div className="overflow-hidden w-250 h-250 flex items-center justify-center">
+            <Image
+              src="/Nafees_Image.jpg"
+              alt="Nafees Image"
+              width={250}
+              height={250}
+              className="rounded-full 
+            bg-black
+            "
+            />
+          </div>
+
+          <div className="flex flex-col justify-center items-center">
+            <p className="py-1">Hello,i'm </p>
+            <h3 className="py-1">Muhammad Nafees</h3>
+            <h4 className="py-1">Mobile Application developer</h4>
+
+            <div className="flex">
+              <button className="rounded-3xl text-white bg-slate-400 py-2 px-4">
+                Download Cv
+              </button>
+              <button className="rounded-3xl text-white bg-slate-400 py-2 px-4">
+                Contact Info
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
 
     </main>
   );
