@@ -1,17 +1,18 @@
 import HeaderTop from "@/Components/HeaderTop";
 import MainContent from "@/Components/MainContent";
+import HeaderAbout from "@/Components/about/HeaderAbout";
 
 function Home() {
 
   return (
     <>
-      <main className="overflow-hidden" >
-        <div className="bg-red-400">
+      <main className="min-h-screen" >
+        <div className="bg-slate-900">
           <HeaderTop />
           <MainContent />
         </div>
-        <div className="bg-slate-500">
-          {/* <HeaderTop /> */}
+        <div className="bg-red-950">
+          <HeaderAbout />
           <MainContent />
         </div>
       </main>
