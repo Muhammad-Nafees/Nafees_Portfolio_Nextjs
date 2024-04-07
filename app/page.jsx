@@ -1,6 +1,7 @@
 import HeaderTop from "@/Components/HeaderTop";
 import MainContent from "@/Components/MainContent";
 import HeaderAbout from "@/Components/about/HeaderAbout";
+import MainContentAbout from "@/Components/about/MainContentAbout";
 
 function Home() {
 
@@ -13,7 +14,7 @@ function Home() {
         </div>
         <div className="bg-red-950">
           <HeaderAbout />
-          <MainContent />
+          <MainContentAbout />
         </div>
       </main>
     </>
