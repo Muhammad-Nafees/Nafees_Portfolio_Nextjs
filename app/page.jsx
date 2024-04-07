@@ -1,78 +1,27 @@
-import Image from "next/image";
+import HeaderTop from "@/Components/HeaderTop";
+import MainContent from "@/Components/MainContent";
 
 function Home() {
 
   return (
-    <main className="bg-red-950 min-h-screen" >
-
-      <div className="px-10 justify-center flex pt-5">
-        <div className="
-         md:max-w-5xl
-         w-full
-         items-center 
-         justify-between
-         flex"
-        >
-          <p className="text-white">
-            Muhammad Nafees
-          </p>
-
-          <ul className="max-md:hidden flex items-center space-x-4">
-            <li><button className="text-white rounded-md px-4 py-2 hover:bg-white hover:text-red-950 transition duration-300"> Home</button></li>
-            <li><button className="text-white rounded-md px-4 py-2 hover:bg-white hover:text-red-950 transition duration-300"> Experience</button></li>
-            <li><button className="text-white rounded-md px-4 py-2 hover:bg-white hover:text-red-950 transition duration-300"> Projects</button></li>
-            <li><button className="text-white rounded-md px-4 py-2 hover:bg-white hover:text-red-950 transition duration-300"> Contact</button></li>
-          </ul>
-
-          <div className="md:hidden">
-            <button>Nav</button>
-          </div>
-
+    <>
+      <main className="overflow-hidden" >
+        <div className="bg-red-400">
+          <HeaderTop />
+          <MainContent />
         </div>
-      </div>
-
-      <div className="flex justify-center items-center bg-zinc-950 lg:bg-slate-950 md:bg-green-400  sm:bg-400 xl:bg-red-700">
-
-        <div className="px-10 md:flex items-center justify-between 
-      xl:w-9/12
-      md:w-10/12
-       ">
-          <div className="overflow-hidden w-250 h-250 flex items-center justify-center">
-            <Image
-              src="/Nafees_Image.jpg"
-              alt="Nafees Image"
-              width={250}
-              height={250}
-              className="rounded-full 
-            bg-black
-            "
-            />
-          </div>
-
-          <div className="flex flex-col justify-center items-center">
-            <p className="py-1">Hello,i'm </p>
-            <h3 className="py-1">Muhammad Nafees</h3>
-            <h4 className="py-1">Mobile Application developer</h4>
-
-            <div className="flex">
-              <button className="rounded-3xl text-white bg-slate-400 py-2 px-4">
-                Download Cv
-              </button>
-              <button className="rounded-3xl text-white bg-slate-400 py-2 px-4">
-                Contact Info
-              </button>
-            </div>
-
-          </div>
+        <div className="bg-slate-500">
+          {/* <HeaderTop /> */}
+          <MainContent />
         </div>
-      </div>
-
-
-    </main>
+      </main>
+    </>
   );
 };
 
 export default Home;
+
+
 
 // <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
