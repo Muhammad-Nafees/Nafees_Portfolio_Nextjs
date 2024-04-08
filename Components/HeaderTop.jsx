@@ -13,9 +13,8 @@ const HeaderTop = () => {
 
     return (
 
-        <div className="m-auto fixed top-0 left-0 right-0 z-10 px-10 justify-center  bg-nafees flex pt-5">
+        <div className="px-10 justify-center  bg-nafees flex pt-5">
             <div className="header_top">
-
                 <Link href="/">
                     <h3 className="text-white font-bold">Muhammad Nafees</h3>
                 </Link>
