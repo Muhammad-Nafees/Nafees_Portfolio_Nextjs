@@ -13,7 +13,7 @@ const HeaderTop = () => {
 
     return (
 
-        <div className="px-10 justify-center  bg-nafees flex pt-5">
+        <div className="px-10 justify-center flex pt-5">
             <div className="header_top">
                 <Link href="/">
                     <h3 className="text-white font-bold">Muhammad Nafees</h3>
