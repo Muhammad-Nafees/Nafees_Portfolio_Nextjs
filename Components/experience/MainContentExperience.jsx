@@ -15,11 +15,11 @@ const MainContentExperience = () => {
             </div>
 
 
-            <div className='pt-5 m-auto w-5/6 flex justify-between items-center'>
+            <div className='py-32 xl:bg-red-200 lg:bg-red-600 pt-14 m-auto w-5/6 lg:flex justify-between items-center'>
                 <div className='rounded-xl border w-[47%] h-96'>
                     <h1 className='font-bold pt-3 text-xl text-center'>Frontend development</h1>
 
-                    <div className='pt-5 w-[75%] flex-wrap m-auto flex items-center justify-between'>
+                    <div className='pt-5 xl:w-[80%] lg:w-[90%] flex-wrap m-auto flex items-center justify-between'>
                         <SkillsMention
                             skill={"HTML"}
                             experience={"Experienced"}
@@ -27,22 +27,27 @@ const MainContentExperience = () => {
                         <SkillsMention
                             skill={"CSS"}
                             experience={"Experienced"}
+
                         />
                         <SkillsMention
                             skill={"Javascript"}
                             experience={"Experienced"}
+
                         />
                         <SkillsMention
                             skill={"React JS"}
                             experience={"Intermediate"}
+
                         />
                         <SkillsMention
                             skill={"Next JS"}
                             experience={"Intermediate"}
+
                         />
                         <SkillsMention
                             skill={"Typesrcipt"}
                             experience={"basic"}
+
                         />
                         <SkillsMention
                             skill={"React-Native"}
@@ -55,22 +60,26 @@ const MainContentExperience = () => {
 
                 <div className=' rounded-xl border w-[47%] h-96'>
                     <h1 className='font-bold text-xl pt-3 text-center'>Backend development</h1>
-                    <div className='pt-5 w-[75%] flex-wrap m-auto flex items-center justify-between'>
+                    <div className='pt-5 xl:w-[80%] lg:w-[90%] flex-wrap m-auto flex items-center justify-between'>
                         <SkillsMention
                             skill={"Express JS"}
                             experience={"basic"}
+
                         />
                         <SkillsMention
                             skill={"Node JS"}
                             experience={"basic"}
+
                         />
                         <SkillsMention
                             skill={"Mongo DB"}
                             experience={"basic"}
+
                         />
                         <SkillsMention
                             skill={"Git"}
                             experience={"Intermediate"}
+
                         />
 
 
