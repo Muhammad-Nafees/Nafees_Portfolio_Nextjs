@@ -1,8 +1,37 @@
+'use client';
 import React from 'react'
 import Image from "next/image";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import Link from "next/link"
+
 
 const MainContent = () => {
+
+    const handleDownload = () => {
+
+        // const applySlice = {
+        //     "one": 1,
+        //     "two": 2,
+        //     "three": 3,
+        //     "four": 4,
+        //     "five": 5,
+        //     "six": 6,
+        //     "seven": 7,
+        //     "eight": 8,
+        //     "nine": 9,
+        // };
+
+        // for (const value in applySlice) {
+        //     if (applySlice.hasOwnProperty(value)) {
+        //         if (value === "one") {
+        //             console.log("HAS ONE PROPERTY_______", applySlice.one)
+        //         }
+        //         console.log("VALUE__________", applySlice[value]);
+        //     }
+        // }
+    }
+
+
 
     return (
         <div className="flex justify-center items-center py-40">
@@ -23,16 +52,23 @@ const MainContent = () => {
                     <h4 className="py-1 text-zinc-500 ">Mobile Application developer</h4>
 
                     <div className="flex py-2 space-x-4">
-                        <button className="buttons_style">
+                        <Link
+                            href='./MuhammadResume-upd.pdf'
+                            target='_blank'
+                            alt="my cv"
+                            rel='noopener noreferrer'
+                            className="buttons_style">
                             Download Cv
-                        </button>
-                        <button className=" buttons_style">
+                        </Link>
+                        <button className="buttons_style">
                             Contact Info
                         </button>
                     </div>
 
                     <div className="flex pt-2 space-x-4">
-                        <BsLinkedin fontSize={24} />
+                        <Link href="https://www.linkedin.com/in/muhammad-nafees2002">
+                            <BsLinkedin fontSize={24} />
+                        </Link>
                         <BsGithub fontSize={24} />
                     </div>
 

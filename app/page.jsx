@@ -2,8 +2,10 @@ import HeaderTop from "@/Components/HeaderTop";
 import MainContent from "@/Components/MainContent";
 import HeaderAbout from "@/Components/about/HeaderAbout";
 import MainContentAbout from "@/Components/about/MainContentAbout";
+import MainContentExperience from "@/Components/experience/MainContentExperience";
 
 function Home() {
+
 
   return (
     <>
@@ -16,6 +18,10 @@ function Home() {
           <HeaderAbout />
           <MainContentAbout />
         </div>
+        <div className="bg-orange-700">
+          <MainContentExperience />
+        </div>
+
       </main>
     </>
   );
