@@ -10,11 +10,11 @@ function Home() {
   return (
     <>
       <main className="min-h-screen" >
-        <div className="bg-slate-900">
+        <div className="bg-nafeesOne">
           <HeaderTop />
           <MainContent />
         </div>
-        <div className="bg-red-950">
+        <div className="bg-nafeesTwo">
           <HeaderAbout />
           <MainContentAbout />
         </div>
