@@ -1,8 +1,13 @@
 'use client';
+// import libraries
 import React from 'react'
 import Image from "next/image";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Link from "next/link"
+import {motion} from "framer-motion"
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { sliceInFromTop } from '@/app/utils/motion';
+
+// import commponents
 
 
 const MainContent = () => {
@@ -46,7 +51,7 @@ const MainContent = () => {
                     />
                 </div>
 
-                <div className="pt-4 flex flex-col justify-center items-center">
+                <motion.div variants={sliceInFromTop} className="pt-4 flex flex-col justify-center items-center">
                     <p className="py-1 text-0x1 ">Hello,i'm </p>
                     <h3 className="py-1 font-bold text-2xl">Muhammad Nafees</h3>
                     <h4 className="py-1 text-zinc-500 ">Mobile Application developer</h4>
@@ -72,7 +77,7 @@ const MainContent = () => {
                         <BsGithub fontSize={24} />
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </div>
 

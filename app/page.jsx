@@ -1,5 +1,5 @@
-import HeaderTop from "@/Components/HeaderTop";
-import MainContent from "@/Components/MainContent";
+import HeaderTop from "@/Components/home/HeaderTop";
+import MainContent from "@/Components/home/MainContent";
 import HeaderAbout from "@/Components/about/HeaderAbout";
 import MainContentAbout from "@/Components/about/MainContentAbout";
 import MainContentExperience from "@/Components/experience/MainContentExperience";
@@ -9,16 +9,15 @@ function Home() {
 
   return (
     <>
-      <main className="min-h-screen" >
-        <div className="bg-nafeesOne">
-          <HeaderTop />
+      <main className="w-screen h-screen bg-gradient-to-r from-purple-500 to-cyan-500" >
+        <div className="">
           <MainContent />
         </div>
-        <div className="bg-nafeesTwo">
+        <div className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <HeaderAbout />
           <MainContentAbout />
         </div>
-        <div className="bg-orange-700">
+        <div className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <MainContentExperience />
         </div>
 
