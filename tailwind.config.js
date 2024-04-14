@@ -13,7 +13,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        nafees: "rgba(170, 160, 144, 0.8)"
+        nafeesOne: "#265565",
+        nafeesTwo: "#288FB1"
+
       }
     },
   },
