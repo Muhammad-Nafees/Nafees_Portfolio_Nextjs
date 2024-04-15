@@ -7,7 +7,7 @@ const MainContentExperience = () => {
 
     return (
         <>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='pt-20 flex flex-col justify-center items-center'>
                 <p className='text-gray-500 text-sm py-2'>Explore My</p>
                 <h1 className='text-white font-bold text-4xl'>Experience</h1>
             </div>
