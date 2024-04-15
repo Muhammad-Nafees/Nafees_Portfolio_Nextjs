@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
@@ -11,28 +12,37 @@ const HeaderTop = () => {
         setNav(!nav)
     }
 
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth'
+        });
+      };
+
     return (
 
-        <div className="px-10 justify-center flex pt-5">
+        <div className="px-10 bg-gradient-to-r from-purple-500 to-cyan-500 justify-center flex pt-5">
             <div className="header_top">
                 <Link href="/">
                     <h3 className="text-white font-bold">Muhammad Nafees</h3>
                 </Link>
-
+<nav>
                 <ul className="hidden md:flex items-center space-x-4">
                     <li className="text-white rounded-md px-4 py-2">
-                        <Link href="/">About</Link>
+                        <Link onClick={() => scrollToSection('about')} href="#about">About</Link>
                     </li>
                     <li className="text-white rounded-md px-4 py-2">
-                        <Link href="/exprience">Experience</Link>
+                        <Link onClick={() => scrollToSection('experience')} href="#experience">Experience</Link>
                     </li>
                     <li className="text-white  rounded-md px-4 py-2">
-                        <Link href="/project">projects</Link>
+                        <Link onClick={() => scrollToSection('project')} href="#project">projects</Link>
                     </li>
                     <li className="text-white  rounded-md px-4 py-2">
-                        <Link href="/contacts">Contacts</Link>
+                        <Link onClick={() => scrollToSection('contact')} href="#contact">Contacts</Link>
                     </li>
                 </ul>
+</nav>
 
                 <div onClick={navbarHandle} className='md:hidden z-10'>
                     {
