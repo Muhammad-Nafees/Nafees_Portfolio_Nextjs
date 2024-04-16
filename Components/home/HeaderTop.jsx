@@ -63,16 +63,16 @@ const HeaderTop = () => {
                         "md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex flex-col ease-in duration-300 bg-black h-screen w-full justify-center items-center"
                 }>
                     <li className="text-white  px-4 py-2">
-                        <Link href="/">About</Link>
+                        <Link onClick={() => scrollToSection('/')} href="#/">About</Link>
                     </li>
                     <li className="text-white  px-4 py-2">
-                        <Link href="/exprience">Experience</Link>
+                        <Link onClick={() => scrollToSection('experience')} href="#exprience">Experience</Link>
                     </li>
                     <li className="text-white px-4 py-2">
-                        <Link href="/project">projects</Link>
+                        <Link onClick={() => scrollToSection('project')} href="#project">projects</Link>
                     </li>
                     <li className="text-white px-4 py-2">
-                        <Link href="/contacts">Contacts</Link>
+                        <Link onClick={() => scrollToSection('contact')} href="#contacts">Contacts</Link>
                     </li>
                 </ul>
 

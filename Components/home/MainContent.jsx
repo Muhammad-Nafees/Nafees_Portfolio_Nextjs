@@ -36,10 +36,19 @@ const MainContent = () => {
         // }
     }
 
+    
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth'
+        });
+      };
 
+    
 
     return (
-        <div className="flex justify-center items-center py-40">
+        <div className="flex justify-center items-center py-28">
             <div className="px-10 md:flex items-center justify-between xl:w-7/12 lg:w-8/12 md:w-10/12">
                 <div className="overflow-hidden w-250 h-250 flex items-center justify-center">
                     <Image
@@ -65,9 +74,10 @@ const MainContent = () => {
                             className="buttons_style">
                             Download Cv
                         </Link>
-                        <button className="buttons_style">
+                        <Link onClick={() => scrollToSection('contact')} href="#contact"
+                          className="buttons_style">
                             Contact Info
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="flex pt-2 space-x-4">
