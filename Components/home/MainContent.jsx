@@ -3,12 +3,11 @@
 import React from 'react'
 import Image from "next/image";
 import Link from "next/link"
-import {motion} from "framer-motion"
 import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { sliceInFromTop } from '@/app/utils/motion';
 
 // import commponents
 
+   
 
 const MainContent = () => {
 
@@ -37,6 +36,7 @@ const MainContent = () => {
     }
 
     
+    
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         window.scrollTo({
@@ -48,7 +48,7 @@ const MainContent = () => {
     
 
     return (
-        <div className="flex justify-center items-center py-28">
+        <div className="flex justify-center items-center py-32">
             <div className="px-10 md:flex items-center justify-between xl:w-7/12 lg:w-8/12 md:w-10/12">
                 <div className="overflow-hidden w-250 h-250 flex items-center justify-center">
                     <Image
@@ -60,7 +60,7 @@ const MainContent = () => {
                     />
                 </div>
 
-                <motion.div variants={sliceInFromTop} className="pt-4 flex flex-col justify-center items-center">
+                <div className="pt-4 flex flex-col justify-center items-center">
                     <p className="py-1 text-0x1 ">Hello,i'm </p>
                     <h3 className="py-1 font-bold text-2xl">Muhammad Nafees</h3>
                     <h4 className="py-1 text-zinc-500 ">Mobile Application developer</h4>
@@ -84,10 +84,12 @@ const MainContent = () => {
                         <Link href="https://www.linkedin.com/in/muhammad-nafees2002">
                             <BsLinkedin fontSize={24} />
                         </Link>
+                        <Link href={"https://www.github.com"}>
                         <BsGithub fontSize={24} />
+                        </Link>
                     </div>
 
-                </motion.div>
+                </div>
             </div>
         </div>
 

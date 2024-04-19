@@ -8,20 +8,20 @@ function Home() {
   return (
     <>
       <main className="h-screen " >
-        <section className="min-h-screen sm:flex sm:flex-col justify-center bg-gradient-to-r from-purple-500 to-cyan-500" id="/">
+        <section id="/" className="sm:flex sm:flex-col justify-center bg-gradient-to-r from-purple-500 to-cyan-500">
           <MainContent />
         </section>
-        <section  id="about" className="min-h-screen bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="about" className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <HeaderAbout />
           <MainContentAbout />
         </section>
-        <section id="experience" className=" min-h-screen bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="experience" className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <MainContentExperience />
         </section>
-        <section id="project" className=" min-h-screen bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="project" className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <MainContentExperience />
         </section>
-        <section id="contact" className=" min-h-screen bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="contact" className="bg-gradient-to-r from-purple-500 to-cyan-500">
           <MainContentExperience />
         </section>
 
