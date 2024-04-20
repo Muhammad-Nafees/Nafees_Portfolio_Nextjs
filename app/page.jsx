@@ -2,6 +2,7 @@ import MainContent from "@/Components/home/MainContent";
 import HeaderAbout from "@/Components/about/HeaderAbout";
 import MainContentAbout from "@/Components/about/MainContentAbout";
 import MainContentExperience from "@/Components/experience/MainContentExperience";
+import MainContentContact from "@/Components/contact/MainContentContact";
 
 function Home() {
 
@@ -22,9 +23,8 @@ function Home() {
           <MainContentExperience />
         </section>
         <section id="contact" className="bg-gradient-to-r from-purple-500 to-cyan-500">
-          <MainContentExperience />
+          <MainContentContact />
         </section>
-
       </main>
     </>
   );

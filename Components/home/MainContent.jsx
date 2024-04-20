@@ -45,7 +45,7 @@ const MainContent = () => {
         });
       };
 
-    
+      
 
     return (
         <div className="flex justify-center items-center py-32">
@@ -65,7 +65,7 @@ const MainContent = () => {
                     <h3 className="py-1 font-bold text-2xl">Muhammad Nafees</h3>
                     <h4 className="py-1 text-zinc-500 ">Mobile Application developer</h4>
 
-                    <div className="flex py-2 space-x-4">
+                    <div className="flex py-4 space-x-4">
                         <Link
                             href='./MuhammadResume-upd.pdf'
                             target='_blank'
@@ -80,7 +80,7 @@ const MainContent = () => {
                         </Link>
                     </div>
 
-                    <div className="flex pt-2 space-x-4">
+                    <div className="flex pt-4 space-x-4">
                         <Link href="https://www.linkedin.com/in/muhammad-nafees2002">
                             <BsLinkedin fontSize={24} />
                         </Link>
