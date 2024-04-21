@@ -1,10 +1,13 @@
+
 import MainContent from "@/Components/home/MainContent";
 import HeaderAbout from "@/Components/about/HeaderAbout";
 import MainContentAbout from "@/Components/about/MainContentAbout";
 import MainContentExperience from "@/Components/experience/MainContentExperience";
 import MainContentContact from "@/Components/contact/MainContentContact";
 
-function Home() {
+   
+
+const Home= ()=> {
 
   return (
     <>
