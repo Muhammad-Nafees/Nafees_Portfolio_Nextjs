@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-export const contactForm = Yup.object().shape({
+export const contactFormSchema = Yup.object().shape({
     name:Yup.string().
     min(3, 'Too Short').
     max(50, 'Too Long!').
@@ -13,4 +13,6 @@ export const contactForm = Yup.object().shape({
       'Must be a valid email',
     )
     .matches(/^[^\s]+$/, 'Email cannot contain spaces'),
+    textArea:Yup.string().
+    required("Message is required"),
 })
