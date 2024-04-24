@@ -5,6 +5,7 @@ const CustomInput = ({
   error,
   onBlur,
   touched,
+  id
 }) => {
 
   return (
@@ -13,6 +14,7 @@ const CustomInput = ({
         <div className="border border-gray-500 py-2 rounded-lg">
           <input
             value={value}
+            id={id}
             autoComplete="off"
             onChange={(e) => onChangeInputValue(e.target.value)}
             placeholder={placeHolder}
