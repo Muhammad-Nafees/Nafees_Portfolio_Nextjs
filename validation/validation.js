@@ -13,6 +13,8 @@ export const contactFormSchema = Yup.object().shape({
       'Must be a valid email',
     )
     .matches(/^[^\s]+$/, 'Email cannot contain spaces'),
-    textArea:Yup.string().
+    role:Yup.string().
+    required("Message is required"),
+    password:Yup.string().
     required("Message is required"),
 })

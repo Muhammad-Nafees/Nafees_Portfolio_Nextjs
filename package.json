@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "formik": "^2.4.5",
     "framer-motion": "^11.0.28",
     "next": "14.1.4",

@@ -4,16 +4,18 @@ import CustomInput from "../reusable_components/CustomInput";
 import { Formik } from "formik";
 
 const MainContentContact = () => {
+  
   const initialValues = {
-    name: "",
     email: "",
-    textArea: "",
+    password:"",
+    username: "",
+    role: "",
   };
 
   const handleSubmitFunc = async (values) => {
-    console.log("valuesName", values);
+    console.log(values);
   };
-
+   
   return (
     <>
       <Formik
@@ -35,17 +37,19 @@ const MainContentContact = () => {
               <h1 className="text-white font-bold text-4xl">Contact Me</h1>
             </div>
 
+
             <div className="py-12">
               <form onSubmit={handleSubmit}>
                  
                 <CustomInput
-                  placeHolder={"Name"}
-                  value={values.name}
-                  error={errors.name}
-                  onChangeInputValue={handleChange("name")}
+                  placeHolder={"username"}
+                  value={values.username}
+                  error={errors.username}
+                  onChangeInputValue={handleChange("username")}
                   onBlur={handleBlur}
-                  touched={touched.name}
+                  touched={touched.username}
                 />
+                 
                 <CustomInput
                   placeHolder={"Email"}
                   value={values.email}
@@ -55,19 +59,28 @@ const MainContentContact = () => {
                   onBlur={handleBlur}
                 />
 
+                <CustomInput
+                  placeHolder={"password"}
+                  value={values.password}
+                  error={errors.password}
+                  touched={touched.password}
+                  onChangeInputValue={handleChange("password")}
+                  onBlur={handleBlur}
+                />
+
                 <div className="w-5/12 m-auto">
                   <div className="border border-gray-500 py-2 rounded-lg">
-                    <textarea
-                      value={values.textArea}
-                      onChange={handleChange("textArea")}
-                      onBlur={handleBlur}
+                    <textarea 
                       placeholder={"Type Your Message"}
+                      value={values.role}
+                      onChange={handleChange("role")}
+                      onBlur={handleBlur}
                       className="pl-3 h-32 bg-transparent border-none outline-none w-11/12 resize-none"
                     />
                   </div>
 
-                  {errors.textArea && touched.textArea && (
-                    <p className="text-red-600">{errors.textArea}</p>
+                  {errors.role && touched.role && (
+                    <p className="text-red-600">{errors.role}</p>
                   )}
                 </div>
               </form>
