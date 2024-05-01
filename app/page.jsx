@@ -7,26 +7,25 @@ import MainContentContact from "../Components/contact/MainContentContact";
 
 
 
-
 const Home= ()=> {
   
   return (
     <>
       <main className="h-screen " >
-        <section id="/" className="sm:flex sm:flex-col justify-center bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="/" className="sm:flex sm:flex-col justify-center bg-[#FBFBFB]">
           <MainContent />
         </section>
-        <section id="about" className="bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="about" className="bg-[#FBFBFB]">
           <HeaderAbout />
           <MainContentAbout />
         </section>
-        <section id="experience" className="bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="experience" className=" bg-[#FBFBFB]">
           <MainContentExperience />
         </section>
-        <section id="project" className="bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="project" className="bg-[#FBFBFB]">
           <MainContentExperience />
         </section>
-        <section id="contact" className="bg-gradient-to-r from-purple-500 to-cyan-500">
+        <section id="contact" className="bg-[#FBFBFB]">
           <MainContentContact />
         </section>
       </main>

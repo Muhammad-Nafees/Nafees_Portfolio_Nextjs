@@ -4,9 +4,9 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 // import commponents
-
 
 const MainContent = () => {
   const handleDownload = () => {
@@ -31,9 +31,7 @@ const MainContent = () => {
       }
     }
   };
-  
-  
-  
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     window.scrollTo({
@@ -44,21 +42,29 @@ const MainContent = () => {
 
   return (
     <div className="flex justify-center items-center py-32">
-      <div className="px-10 md:flex items-center justify-between xl:w-7/12 lg:w-8/12 md:w-10/12">
-        <div className="overflow-hidden w-250 h-250 flex items-center justify-center">
+      <div className="px-10 md:flex items-center justify-between xl:w-9/12 lg:w-8/12 md:w-10/12">
+        <motion.div
+           animate={{ x: 100 }}
+           transition={{ type: "spring", stiffness: 100 }}
+          className="overflow-hidden w-250 h-250 flex items-center justify-center"
+        >
           <Image
             src="/Nafees_Image.jpg"
             alt="Nafees Image"
-            width={280}
-            height={280}
+            width={300}
+            height={300}
             className="rounded-full"
           />
-        </div>
+        </motion.div>
 
-        <div className="pt-4 flex flex-col justify-center items-center">
-          <p className="py-1 text-0x1 ">Hello,i'm </p>
-          <h3 className="py-1 font-bold text-2xl">Muhammad Nafees</h3>
-          <h4 className="py-1 text-zinc-500 ">Mobile Application developer</h4>
+        <div className="pt-4 px-4 flex flex-col justify-center items-center">
+          <p className="py-1 text-0x1 text-[#555555]">Hello,i'm </p>
+          <h3 className="py-1 font-bold text-2xl text-[#000000]">
+            Muhammad Nafees
+          </h3>
+          <h4 className="py-1 text-3xl text-[#555555] md:text-center">
+            Mobile Application developer
+          </h4>
 
           <div className="flex py-4 space-x-4">
             <Link
