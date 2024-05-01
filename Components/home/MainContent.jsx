@@ -1,11 +1,12 @@
 "use client";
 // import libraries
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 // import commponents
+
 
 const MainContent = () => {
   const handleDownload = () => {
@@ -31,8 +32,8 @@ const MainContent = () => {
     }
   };
   
-
-
+  
+  
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     window.scrollTo({
