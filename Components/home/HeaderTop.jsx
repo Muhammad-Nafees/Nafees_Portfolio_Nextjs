@@ -4,6 +4,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {navbarData} from "./../../app/data/navbardata"
+import {motion} from "framer-motion"
+
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
 
@@ -19,29 +21,31 @@ const HeaderTop = () => {
     });
   };
 
-
+  
 
   return (
     <div className="px-8  bg-[#FBFBFB] justify-center flex pt-5">
       <div className="header_top">
 
         <Link className="flex items-center" href="/">
-          <div className="w-8 h-8 mx-2 bg-black flex justify-center items-center">
+          <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
             <h2 className="font-serif text-white">N</h2>
           </div>
+          <motion.div whileHover={{scale:1.05}}>
           <h3 className="text-black font-bold text-lg">Muhammad Nafees</h3>
+          </motion.div>
         </Link>
-      
-      
 
         <nav>
           <ul className="hidden md:flex items-center space-x-4">
             {
               navbarData.map((value)=>(
-            <li className="text-black  rounded-md px-4 py-2">
+            <li className="text-blackMain text-lg rounded-md px-4 py-2">
+                <motion.div whileHover={{scale:1.4}}>
               <Link onClick={() => scrollToSection(value.scrollSectionName)} href={value.href}>
                 {value.name}
               </Link>
+                </motion.div>
             </li>
               ))
             }
@@ -50,9 +54,9 @@ const HeaderTop = () => {
 
         <div onClick={navbarHandle} className="md:hidden z-10">
           {nav ? (
-            <AiOutlineClose color="white" />
+            <AiOutlineClose color="black" />
           ) : (
-            <AiOutlineMenu color="white" />
+            <AiOutlineMenu color="black" />
           )}
         </div>
 

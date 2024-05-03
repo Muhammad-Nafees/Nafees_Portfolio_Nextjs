@@ -6,7 +6,6 @@ import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-// import commponents
 
 const MainContent = () => {
   const handleDownload = () => {
@@ -40,13 +39,14 @@ const MainContent = () => {
     });
   };
 
+
+
   return (
     <div className="flex justify-center items-center py-32">
-      <div className="px-10 md:flex items-center justify-between xl:w-9/12 lg:w-8/12 md:w-10/12">
+      <div className="px-10 md:flex items-center justify-between xl:w-8/12 lg:w-8/12 md:w-10/12">
         <motion.div
-           animate={{ x: 100 }}
-           transition={{ type: "spring", stiffness: 100 }}
-          className="overflow-hidden w-250 h-250 flex items-center justify-center"
+         whileHover={{scale:1.1}}          
+         className="overflow-hidden w-250 h-250 flex items-center justify-center"
         >
           <Image
             src="/Nafees_Image.jpg"
@@ -58,11 +58,11 @@ const MainContent = () => {
         </motion.div>
 
         <div className="pt-4 px-4 flex flex-col justify-center items-center">
-          <p className="py-1 text-0x1 text-[#555555]">Hello,i'm </p>
+          <p className="py-1 text-0x1 text-greyMain">Hello,i'm </p>
           <h3 className="py-1 font-bold text-2xl text-[#000000]">
             Muhammad Nafees
           </h3>
-          <h4 className="py-1 text-3xl text-[#555555] md:text-center">
+          <h4 className="py-1 text-3xl text-greyMain md:text-center">
             Mobile Application developer
           </h4>
 

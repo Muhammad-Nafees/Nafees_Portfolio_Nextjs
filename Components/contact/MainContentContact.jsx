@@ -16,7 +16,6 @@ const MainContentContact = () => {
     console.log("VALUE",values);
   };
 
-
   return (
     <>
       <Formik
@@ -35,7 +34,7 @@ const MainContentContact = () => {
           <>
             <div className="pt-20 flex flex-col justify-center items-center">
               <p className="text-gray-500 text-sm py-2">Get In Touch</p>
-              <h1 className="text-white font-bold text-4xl">Contact Me</h1>
+              <h1 className="text-blackMain font-bold text-4xl">Contact Me</h1>
             </div>
             <div className="py-12">
               <form onSubmit={handleSubmit}>

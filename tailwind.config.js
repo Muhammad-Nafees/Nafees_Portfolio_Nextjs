@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         nafeesOne: "#265565",
-        nafeesTwo: "#288FB1"
+        nafeesTwo: "#288FB1",
+        greyMain:'#555555',
+        blackMain:'#000000'
 
       }
     },

@@ -11,8 +11,9 @@ export const sliceInFromLeft= (delay) => {
             }
          }
       }
-}
-
+};
+ 
+   
 
 export const sliceInFromRight= (delay) => {
     return{
@@ -26,9 +27,9 @@ export const sliceInFromRight= (delay) => {
           }
        }
     }
-}
+};
 
-
+  
 
 export const sliceInFromTop={
        hidden:{x:-100,opacity:0},
@@ -40,4 +41,4 @@ export const sliceInFromTop={
                duration:0.5
           }
        }
-}
+};
