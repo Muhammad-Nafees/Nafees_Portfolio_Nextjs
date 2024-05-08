@@ -6,9 +6,12 @@ import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 
+  
 
 const MainContent = () => {
+
   const handleDownload = () => {
+
     const applySlice = {
       one: 1,
       two: 2,

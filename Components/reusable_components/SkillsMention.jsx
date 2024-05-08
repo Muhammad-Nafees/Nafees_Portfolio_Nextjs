@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiCheck } from 'react-icons/fi'
 
+
 const SkillsMention = ({ skill, experience }) => {
 
     return (
@@ -19,5 +20,5 @@ const SkillsMention = ({ skill, experience }) => {
             </div>
         </div>
     )
-}
+};
 export default SkillsMention;

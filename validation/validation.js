@@ -17,4 +17,4 @@ export const contactFormSchema = Yup.object().shape({
     required("Message is required"),
     password:Yup.string().
     required("Message is required"),
-})
+});
