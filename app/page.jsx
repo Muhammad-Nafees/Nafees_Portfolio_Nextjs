@@ -4,6 +4,7 @@ import HeaderAbout from "../Components/about/HeaderAbout";
 import MainContentAbout from "../Components/about/MainContentAbout";
 import MainContentExperience from "../Components/experience/MainContentExperience";
 import MainContentContact from "../Components/contact/MainContentContact";
+import MainContentProject from "../Components/projects/MainContentProject";
 
 
 
@@ -23,7 +24,7 @@ const Home= ()=> {
           <MainContentExperience />
         </section>
         <section id="project" className="bg-[#FBFBFB]">
-          <MainContentExperience />
+           <MainContentProject/>
         </section>
         <section id="contact" className="bg-[#FBFBFB]">
           <MainContentContact />

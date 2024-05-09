@@ -21,7 +21,7 @@ const MainContentExperience = () => {
             <SkillsMention skill={"Javascript"} experience={"Experienced"} />
             <SkillsMention skill={"React JS"} experience={"Intermediate"} />
             <SkillsMention skill={"Next JS"} experience={"Intermediate"} />
-            <SkillsMention skill={"Typesrcipt"} experience={"basic"} />
+            <SkillsMention skill={"Typesrcipt"} experience={"Intermediate"} />
             <SkillsMention skill={"React-Native"} experience={"Intermediate"} />
           </div>
         </div>
