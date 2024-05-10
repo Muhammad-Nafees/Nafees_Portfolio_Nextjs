@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomLinkButton from "../reusable_components/CustomLinkButton";
+import ProjectsCard from "../shared-components/ProjectsCard"
 
 const MainContentProject = () => {
   // rgb(163, 163, 163)  border color
@@ -7,36 +7,28 @@ const MainContentProject = () => {
 
   return (
     <>
-      <div>
-        <div className="border-borderProjectsColor bg-red-300 h-[85vh] w-[55vh] rounded-xl text-center ">
-          <div className="flex justify-center items-center p-4">
-            <Image
-              alt="Feeda Gpt"
-              width={200}
-              height={200}
-              style={{ objectFit: "cover" }}
-              objectFit="cover"
-              src={require("../../public/feedaGptCrop.jpg")}
-              className="rounded-2xl bg-slate-500"
-            />
-          </div>
+      <div className="flex w-10/12 justify-between items-center m-auto">  
+       <ProjectsCard
+          source={require("../../public/feedaGpt.webp")}
+          alt={"Feeda GPT"}
+          text={"Project One"}
+          hrefParent={"https://play.google.com/store/apps/details?id=com.smaz.feedagpt"}
+        />
+         <ProjectsCard
+          source={require("../../public/kaiGpt.webp")}
+          alt={"kai GPT"}
+          text={"Project Two"}
+          hrefParent={"https://play.google.com/store/apps/details?id=com.smaz.kaigpt"}
 
-          <div>
-            <p className="py-4 text-black font-bold text-2xl">Project One</p>
-            <CustomLinkButton
-              target={"_blank"}
-              text={"Live Demo"}
-              href={
-                "https://play.google.com/store/apps/details?id=com.smaz.kaigpt"
-              }
-              extraStyle={
-                "hover:bg-black hover:text-white border text-black border-black w-36 h-12 text-center justify-center items-center flex  m-auto py-2 px-4  rounded-full"
-              }
-            />
-          </div>
-        </div>
+        />
+          <ProjectsCard
+          source={require("../../public/peacemakerimage.webp")}
+          alt={"Peace Maker"}
+          text={"Project Three"}
+          hrefParent={"https://play.google.com/store/apps/details?id=com.softwareAlliance.peaceMaker&hl=en&gl=US"}
 
-        <div></div>
+        />
+
       </div>
     </>
   );

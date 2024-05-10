@@ -28,7 +28,7 @@ const MainContentAbout = () => {
               />
               <p className="text-black font-bold">Experience</p>
               <p className="text-black">1+ year</p>
-              <p className="text-black lg:text-sm xl:text-base">
+              <p className="text-black lg:text-sm xl:text-base text-center">
                 Mobile Application development
               </p>
             </div>
@@ -41,7 +41,7 @@ const MainContentAbout = () => {
                 src={require("../../public/education.png")}
               />
               <p className="text-black font-bold">Education</p>
-              <p>Bachelor Bscs continue</p>
+              <p className="text-center">Bachelor Bscs continue</p>
             </div>
           </div>
 
