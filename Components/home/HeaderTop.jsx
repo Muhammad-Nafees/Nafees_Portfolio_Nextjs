@@ -37,7 +37,7 @@ const HeaderTop = () => {
           <ul className="hidden md:flex items-center space-x-4">
             {navbarData.map((value) => (
               <li className="text-blackMain text-lg rounded-md px-4 py-2">
-                <motion.div whileHover={{ scale: 1.25 }}>
+                <motion.div whileHover={{ scale: 1.2 }}>
                   <Link
                     onClick={() => scrollToSection(value.scrollSectionName)}
                     href={value.href}
@@ -52,7 +52,7 @@ const HeaderTop = () => {
 
         <div onClick={navbarHandle} className="md:hidden z-10">
           {nav ? (
-            <AiOutlineClose color="black" />
+            <AiOutlineClose color="white" />
           ) : (
             <AiOutlineMenu color="black" />
           )}

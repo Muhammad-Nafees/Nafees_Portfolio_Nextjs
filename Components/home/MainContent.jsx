@@ -38,11 +38,11 @@ const MainContent = () => {
       behavior: "smooth",
     });
   };
-
+  // xl:w-9/12 lg:w-8/12 md:w-11/12
   return (
     <div className="flex justify-center items-center py-32">
-      <div className="px-10 md:flex items-center justify-between xl:w-9/12 lg:w-8/12 md:w-11/12">
-        <motion.div
+      <div className="px-10 md:flex items-center justify-between lg:space-x-16">
+        <motion.div 
           whileHover={{ scale: 1.05, }}
           className="w-250 h-250 flex items-center justify-center"
         >
@@ -55,8 +55,8 @@ const MainContent = () => {
           />
         </motion.div>
 
-        <div className="pt-4 px-4 flex flex-col justify-center items-center">
-          <p className="py-1 sm:text-0x1 text-greyMain">Hello,i'm </p>
+        <div className="lg:pt-0 pt-8 px-4 flex flex-col justify-center items-center">
+          <p className="py-1 sm:text-0x1 font-semibold text-greyMain">Hello,i'm </p>
           <h3 className="py-1 font-bold sm:text-2xl text-[#000000]">
             Muhammad Nafees
           </h3>

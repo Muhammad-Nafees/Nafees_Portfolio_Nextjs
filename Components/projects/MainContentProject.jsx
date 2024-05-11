@@ -7,8 +7,8 @@ const MainContentProject = () => {
 
   return (
     <>
-      <div className="lg:flex w-7/12 lg:w-4/5 justify-between items-center m-auto">  
-        
+
+      <div className="lg:flex w-7/12 lg:w-4/5 lg:space-x-8 justify-around items-center m-auto">      
        <ProjectsCard
           source={require("../../public/feedaGpt.webp")}
           alt={"Feeda GPT"}
