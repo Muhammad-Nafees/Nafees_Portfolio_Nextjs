@@ -1,13 +1,14 @@
-import Image from "next/image";
 import ProjectsCard from "../shared-components/ProjectsCard"
 
 const MainContentProject = () => {
+
   // rgb(163, 163, 163)  border color
   // rgb(250, 250, 250)  background Color
 
   return (
     <>
-      <div className="flex w-10/12 justify-between items-center m-auto">  
+      <div className="lg:flex w-7/12 lg:w-4/5 justify-between items-center m-auto">  
+        
        <ProjectsCard
           source={require("../../public/feedaGpt.webp")}
           alt={"Feeda GPT"}

@@ -5,15 +5,13 @@ const MainContentAbout = () => {
   return (
     <div className="">
       <div className="py-20 w-full m-auto lg:flex justify-between items-center lg:w-10/12">
-
-          
         <div className="w-4/5 h-4/5 sm:w-2/5 m-auto flex items-center justify-center">
           <Image
             src="/Nafees_Image.jpg"
             alt="Nafees Image"
             width={400}
             height={400}
-            className="rounded-xl "
+            className="rounded-xl"
           />
         </div>
 

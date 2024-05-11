@@ -1,4 +1,3 @@
-
 import MainContent from "../Components/home/MainContent";
 import HeaderAbout from "../Components/about/HeaderAbout";
 import MainContentAbout from "../Components/about/MainContentAbout";
@@ -6,7 +5,7 @@ import MainContentExperience from "../Components/experience/MainContentExperienc
 import MainContentContact from "../Components/contact/MainContentContact";
 import MainContentProject from "../Components/projects/MainContentProject";
 
-
+ 
 
 const Home= ()=> {
   

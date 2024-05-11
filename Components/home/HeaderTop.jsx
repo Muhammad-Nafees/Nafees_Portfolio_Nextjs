@@ -3,8 +3,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import {navbarData} from "./../../app/data/navbardata"
-import {motion} from "framer-motion"
+import { navbarData } from "./../../app/data/navbardata";
+import { motion } from "framer-motion";
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
@@ -21,34 +21,32 @@ const HeaderTop = () => {
     });
   };
 
-  
-
   return (
     <div className="px-8  bg-[#FBFBFB] justify-center flex pt-5">
       <div className="header_top">
-
-        <Link className="flex items-center" href="/">
+        <div className="flex items-center">
           <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
             <h2 className="font-serif text-white">N</h2>
           </div>
-          <motion.div whileHover={{scale:1.05}}>
-          <h3 className="text-black font-bold text-lg">Muhammad Nafees</h3>
-          </motion.div>
-        </Link>
+          <div>
+            <h3 className="text-black font-bold text-lg">Muhammad Nafees</h3>
+          </div>
+        </div>
 
         <nav>
           <ul className="hidden md:flex items-center space-x-4">
-            {
-              navbarData.map((value)=>(
-            <li className="text-blackMain text-lg rounded-md px-4 py-2">
-                <motion.div whileHover={{scale:1.4}}>
-              <Link onClick={() => scrollToSection(value.scrollSectionName)} href={value.href}>
-                {value.name}
-              </Link>
+            {navbarData.map((value) => (
+              <li className="text-blackMain text-lg rounded-md px-4 py-2">
+                <motion.div whileHover={{ scale: 1.25 }}>
+                  <Link
+                    onClick={() => scrollToSection(value.scrollSectionName)}
+                    href={value.href}
+                  >
+                    {value.name}
+                  </Link>
                 </motion.div>
-            </li>
-              ))
-            }
+              </li>
+            ))}
           </ul>
         </nav>
 
