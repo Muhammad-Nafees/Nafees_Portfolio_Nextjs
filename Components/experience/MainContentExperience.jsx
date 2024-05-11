@@ -6,7 +6,7 @@ const MainContentExperience = () => {
     <>
       <div className="pt-20 flex flex-col justify-center items-center">
         <p className="text-gray-500 text-sm py-2">Explore My</p>
-        <h1 className="text-white font-bold text-4xl">Experience</h1>
+        <h1 className="text-blackMain font-bold text-4xl">Experience</h1>
       </div>
 
       <div className="py-32 pt-14 m-auto flex flex-col md:flex-row md:w-[95%] w-[80%] lg:w-[90%] md:flex justify-between items-center">
@@ -21,7 +21,7 @@ const MainContentExperience = () => {
             <SkillsMention skill={"Javascript"} experience={"Experienced"} />
             <SkillsMention skill={"React JS"} experience={"Intermediate"} />
             <SkillsMention skill={"Next JS"} experience={"Intermediate"} />
-            <SkillsMention skill={"Typesrcipt"} experience={"basic"} />
+            <SkillsMention skill={"Typesrcipt"} experience={"Intermediate"} />
             <SkillsMention skill={"React-Native"} experience={"Intermediate"} />
           </div>
         </div>

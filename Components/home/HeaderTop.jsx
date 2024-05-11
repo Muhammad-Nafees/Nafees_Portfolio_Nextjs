@@ -3,6 +3,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { navbarData } from "./../../app/data/navbardata";
+import { motion } from "framer-motion";
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
@@ -20,47 +22,39 @@ const HeaderTop = () => {
   };
 
   return (
-    <div className="px-8 bg-gradient-to-r from-purple-500 to-cyan-500 justify-center flex pt-5">
+    <div className="px-8  bg-[#FBFBFB] justify-center flex pt-5">
       <div className="header_top">
-        <Link className="flex items-center" href="/">
-          <div className="w-8 h-8 mx-2 bg-black flex justify-center items-center">
+        <div className="flex items-center">
+          <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
             <h2 className="font-serif text-white">N</h2>
           </div>
-          <h3 className="text-white font-bold text-lg">Muhammad Nafees</h3>
-        </Link>
+          <div>
+            <h3 className="text-black font-bold text-lg">Muhammad Nafees</h3>
+          </div>
+        </div>
+
         <nav>
           <ul className="hidden md:flex items-center space-x-4">
-            <li className="text-white rounded-md px-4 py-2">
-              <Link onClick={() => scrollToSection("about")} href="#about">
-                About
-              </Link>
-            </li>
-            <li className="text-white rounded-md px-4 py-2">
-              <Link
-                onClick={() => scrollToSection("experience")}
-                href="#experience"
-              >
-                Experience
-              </Link>
-            </li>
-            <li className="text-white  rounded-md px-4 py-2">
-              <Link onClick={() => scrollToSection("project")} href="#project">
-                projects
-              </Link>
-            </li>
-            <li className="text-white  rounded-md px-4 py-2">
-              <Link onClick={() => scrollToSection("contact")} href="#contact">
-                Contacts
-              </Link>
-            </li>
+            {navbarData.map((value) => (
+              <li className="text-blackMain text-lg rounded-md px-4 py-2">
+                <motion.div whileHover={{ scale: 1.25 }}>
+                  <Link
+                    onClick={() => scrollToSection(value.scrollSectionName)}
+                    href={value.href}
+                  >
+                    {value.name}
+                  </Link>
+                </motion.div>
+              </li>
+            ))}
           </ul>
         </nav>
 
         <div onClick={navbarHandle} className="md:hidden z-10">
           {nav ? (
-            <AiOutlineClose color="white" />
+            <AiOutlineClose color="black" />
           ) : (
-            <AiOutlineMenu color="white" />
+            <AiOutlineMenu color="black" />
           )}
         </div>
 
