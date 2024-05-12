@@ -5,6 +5,9 @@ import CustomInput from "../reusable_components/CustomInput";
 import { Formik } from "formik";
 
 const MainContentContact = () => {
+
+
+
   const initialValues = {
     username: "",
     email: "",
@@ -13,9 +16,10 @@ const MainContentContact = () => {
   };
 
   const handleSubmitFunc = async (values) => {
-    console.log("VALUE", values);
+      console.log("🚀 ~ handleSubmitFunc ~ values:", values);
   };
 
+ 
   return (
     <>
       <Formik
@@ -31,6 +35,7 @@ const MainContentContact = () => {
           handleBlur,
           handleSubmit,
         }) => (
+          console.log("🚀 ~ MainContentContact ~ values:", values),
           <>
             <div className="pt-20 flex flex-col justify-center items-center">
               <p className="text-gray-500 text-sm py-2">Get In Touch</p>

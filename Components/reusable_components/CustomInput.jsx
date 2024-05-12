@@ -1,4 +1,5 @@
- 
+import { useState } from "react";
+
 const CustomInput = ({
   placeHolder,
   onChangeInputValue,
@@ -6,8 +7,18 @@ const CustomInput = ({
   error,
   onBlur,
   touched,
-  id
+  id,
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+
+  const handleInputFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsFocused(false);
+  };
 
   return (
     <>
@@ -19,12 +30,12 @@ const CustomInput = ({
             autoComplete="off"
             onChange={(e) => onChangeInputValue(e.target.value)}
             placeholder={placeHolder}
-            onBlur={onBlur}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
             className="pl-3 bg-transparent border-none outline-none w-11/12"
           />
         </div>
-        {error &&touched&& <p className="text-red-600">{error}</p>}
-        
+        {error && touched && isFocused&&  <p className="text-red-600">{error}</p>}
       </div>
     </>
   );
