@@ -1,14 +1,15 @@
 import { useState } from "react";
+import Fixheight from "../shared-components/Fixheight"
 
 const CustomInput = ({
   placeHolder,
   onChangeInputValue,
   value,
   error,
-  onBlur,
   touched,
   id,
 }) => {
+
   const [isFocused, setIsFocused] = useState(false);
 
 
@@ -20,10 +21,11 @@ const CustomInput = ({
     setIsFocused(false);
   };
 
+
   return (
     <>
-      <div className="w-5/12 m-auto h-16">
-        <div className="border border-gray-500 py-2 rounded-lg">
+      <div className=" w-5/12 m-auto">
+        <div className="border border-gray-500 py-2 rounded-lg ">
           <input
             value={value}
             id={id}
@@ -35,7 +37,13 @@ const CustomInput = ({
             className="pl-3 bg-transparent border-none outline-none w-11/12"
           />
         </div>
-        {error && touched && isFocused&&  <p className="text-red-600">{error}</p>}
+        <div className="py-1">
+        {error && ((touched && !value) || (error && value) || isFocused) ? (
+            <p className="text-red-600 text-sm">{error}</p>
+          ) : (
+            <Fixheight/>
+          )}
+        </div>
       </div>
     </>
   );

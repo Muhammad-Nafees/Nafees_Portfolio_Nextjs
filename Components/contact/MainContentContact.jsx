@@ -1,31 +1,33 @@
 "use client";
+import React from "react";
 import { contactFormSchema } from "../../validation/validation";
 import CustomButton from "../reusable_components/CustomButton";
 import CustomInput from "../reusable_components/CustomInput";
 import { Formik } from "formik";
 
+  
+
 const MainContentContact = () => {
-
-
 
   const initialValues = {
     username: "",
     email: "",
     password: "",
-    role: "",
+    description: "",
   };
 
   const handleSubmitFunc = async (values) => {
-      console.log("🚀 ~ handleSubmitFunc ~ values:", values);
+    console.log("🚀 ~ handleSubmitFunc ~ values:", values);
   };
 
- 
   return (
     <>
       <Formik
         initialValues={initialValues}
         validationSchema={contactFormSchema}
-        onSubmit={handleSubmitFunc}
+        onSubmit={() => {
+          console.log("🚀 ~ handleSubmitFunc ~ values:");
+        }}
       >
         {({
           errors,
@@ -35,12 +37,12 @@ const MainContentContact = () => {
           handleBlur,
           handleSubmit,
         }) => (
-          console.log("🚀 ~ MainContentContact ~ values:", values),
           <>
             <div className="pt-20 flex flex-col justify-center items-center">
               <p className="text-gray-500 text-sm py-2">Get In Touch</p>
               <h1 className="text-blackMain font-bold text-4xl">Contact Me</h1>
             </div>
+
             <div className="py-12">
               <form onSubmit={handleSubmit}>
                 <CustomInput
@@ -77,37 +79,27 @@ const MainContentContact = () => {
                   <div className="border border-gray-500 py-2 rounded-lg">
                     <textarea
                       placeholder={"Type Your Message"}
-                      value={values.role}
-                      onChange={handleChange("role")}
+                      value={values.description}
+                      onChange={handleChange("description")}
                       onBlur={handleBlur}
-                      id={"role"}
+                      id={"description"}
                       className="pl-3 h-32 bg-transparent border-none outline-none w-11/12 resize-none"
                     />
                   </div>
 
-                  {errors.role && touched.role && (
-                    <p className="text-red-600">{errors.role}</p>
+                  {errors.description && touched.description && (
+                    <p className="text-red-600">{errors.description}</p>
                   )}
                 </div>
               </form>
-              {/* className="px-8 py-3 bg-nafeesOne flex justify-center items-center m-auto rounded-lg" */}
               <div className="pt-6">
                 <CustomButton
                   onSubmitAction={handleSubmit}
-                  type={"submit"}
-                  text={"Send"}
-                  extraStyle={
-                    "hover:bg-black hover:text-white border text-black border-black w-28 text-sm sm:text-base sm:w-36 h-12 text-center justify-center items-center flex  m-auto py-2 px-4  rounded-full transition duration-200 ease-in "
-                  }
+                  type="submit"
+                  text="Send"
+                  extraStyle="hover:bg-black hover:text-white border text-black border-black w-28 text-sm sm:text-base sm:w-36 h-12 text-center justify-center items-center flex m-auto py-2 px-4 rounded-full transition duration-200 ease-in"
                 />
               </div>
-
-              {/* <button
-                onSubmit={handleSubmit}
-                type="submit"
-              >
-                <p className="text-black font-semibold">Send</p>
-              </button> */}
             </div>
           </>
         )}

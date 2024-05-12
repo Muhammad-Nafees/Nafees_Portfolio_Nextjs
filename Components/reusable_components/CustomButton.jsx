@@ -1,7 +1,8 @@
 const CustomButton = ({ onSubmitAction, type, extraStyle, text }) => {
   return (
-    <button onSubmit={onSubmitAction} type={type} className={extraStyle}>
-      {text} </button>
+    <button type={type} onClick={onSubmitAction} className={extraStyle}>
+      {text}
+    </button>
   );
 };
 

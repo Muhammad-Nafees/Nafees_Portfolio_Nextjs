@@ -35,8 +35,8 @@ const HeaderTop = () => {
 
         <nav>
           <ul className="hidden md:flex items-center space-x-4">
-            {navbarData.map((value) => (
-              <li className="text-blackMain text-lg rounded-md px-4 py-2">
+            {navbarData.map((value,index) => (
+              <li key={index} className="text-blackMain text-lg rounded-md px-4 py-2">
                 <motion.div whileHover={{ scale: 1.2 }}>
                   <Link
                     onClick={() => scrollToSection(value.scrollSectionName)}
