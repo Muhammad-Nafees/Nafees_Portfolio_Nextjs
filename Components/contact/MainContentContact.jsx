@@ -1,19 +1,19 @@
 "use client";
 import { contactFormSchema } from "../../validation/validation";
+import CustomButton from "../reusable_components/CustomButton";
 import CustomInput from "../reusable_components/CustomInput";
 import { Formik } from "formik";
 
 const MainContentContact = () => {
-  
   const initialValues = {
     username: "",
     email: "",
     password: "",
     role: "",
   };
-   
+
   const handleSubmitFunc = async (values) => {
-    console.log("VALUE",values);
+    console.log("VALUE", values);
   };
 
   return (
@@ -85,14 +85,24 @@ const MainContentContact = () => {
                   )}
                 </div>
               </form>
+              {/* className="px-8 py-3 bg-nafeesOne flex justify-center items-center m-auto rounded-lg" */}
+              <div className="pt-6">
+                <CustomButton
+                  onSubmitAction={handleSubmit}
+                  type={"submit"}
+                  text={"Send"}
+                  extraStyle={
+                    "hover:bg-black hover:text-white border text-black border-black w-28 text-sm sm:text-base sm:w-36 h-12 text-center justify-center items-center flex  m-auto py-2 px-4  rounded-full transition duration-200 ease-in "
+                  }
+                />
+              </div>
 
-              <button
+              {/* <button
                 onSubmit={handleSubmit}
                 type="submit"
-                className="px-8 py-3 bg-nafeesOne flex justify-center items-center m-auto rounded-lg"
               >
                 <p className="text-black font-semibold">Send</p>
-              </button>
+              </button> */}
             </div>
           </>
         )}
