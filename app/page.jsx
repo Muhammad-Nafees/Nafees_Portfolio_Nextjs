@@ -5,14 +5,14 @@ import MainContentExperience from "../Components/experience/MainContentExperienc
 import MainContentContact from "../Components/contact/MainContentContact";
 import MainContentProject from "../Components/projects/MainContentProject";
 
- 
-
-const Home= ()=> {
-  
+const Home = () => {
   return (
     <>
-      <main className="h-screen " >
-        <section id="/" className="sm:flex sm:flex-col justify-center bg-[#FBFBFB]">
+      <main className="h-screen ">
+        <section
+          id="/"
+          className="sm:flex sm:flex-col justify-center bg-[#FBFBFB]"
+        >
           <MainContent />
         </section>
         <section id="about" className="bg-[#FBFBFB]">
@@ -23,7 +23,7 @@ const Home= ()=> {
           <MainContentExperience />
         </section>
         <section id="project" className="bg-[#FBFBFB]">
-           <MainContentProject/>
+          <MainContentProject />
         </section>
         <section id="contact" className="bg-[#FBFBFB]">
           <MainContentContact />
