@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header_top {
+    @apply md:max-w-5xl
+     w-full
+     items-center 
+     justify-between
+     flex
+     cursor-pointer;
+  }
+  .buttons_style {
+    @apply hover:bg-black
+    hover:text-white
+    border
+    text-white
+     border-black
+     py-2 
+     px-4
+     rounded-3xl;
+     background-color:#353535
+     ;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "nafees": "Notes Story 1",
+        "id": 1,
+        "age":21
+    },
+    {
+        "muneeb": "Notes Story 2",
+        "id": 2,
+        "age":20
+    },
+    {
+        "zainab bibi": "Notes Story 3",
+        "id": 3,
+        "age":40
+    },
+    {
+        "Rafique": "Notes Story 4",
+        "id":4,
+        "age": 47
+    },
+    {
+        "afia": "Notes Story 5",
+        "id": 5,
+        "age":10
+    },
+    {
+        "hamza": "Notes Story 6",
+        "id": 6,
+        "age":16
+    }
+]
