@@ -1,17 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { navbarData } from "./../../app/data/navbardata";
 import { motion } from "framer-motion";
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
+  console.log("🚀 ~ HeaderTop ~ nav:", nav);
 
   const navbarHandle = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    // Handle body overflow when nav state changes
+    if (nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // Cleanup function to reset body overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [nav]);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -22,7 +36,7 @@ const HeaderTop = () => {
   };
 
   return (
-    <div className="px-8  bg-[#FBFBFB] justify-center flex pt-5">
+    <div className="px-8 justify-center flex pt-5">
       <div className="header_top">
         <div className="flex items-center">
           <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
@@ -35,9 +49,12 @@ const HeaderTop = () => {
 
         <nav>
           <ul className="hidden md:flex items-center space-x-4">
-            {navbarData.map((value) => (
-              <li className="text-blackMain text-lg rounded-md px-4 py-2">
-                <motion.div whileHover={{ scale: 1.25 }}>
+            {navbarData.map((value, index) => (
+              <li
+                key={index}
+                className="text-blackMain text-lg rounded-md px-4 py-2"
+              >
+                <motion.div whileHover={{ scale: 1.2 }}>
                   <Link
                     onClick={() => scrollToSection(value.scrollSectionName)}
                     href={value.href}
@@ -52,7 +69,7 @@ const HeaderTop = () => {
 
         <div onClick={navbarHandle} className="md:hidden z-10">
           {nav ? (
-            <AiOutlineClose color="black" />
+            <AiOutlineClose color="white" />
           ) : (
             <AiOutlineMenu color="black" />
           )}
@@ -68,25 +85,47 @@ const HeaderTop = () => {
           }
         >
           <li className="text-white  px-4 py-2">
-            <Link onClick={() => scrollToSection("/")} href="#/">
+            <Link
+              onClick={() => {
+                scrollToSection("/");
+                setNav(false);
+              }}
+              href="#/"
+            >
               About
             </Link>
           </li>
+
           <li className="text-white  px-4 py-2">
             <Link
-              onClick={() => scrollToSection("experience")}
+              onClick={() => {
+                scrollToSection("experience");
+                setNav(false);
+              }}
               href="#exprience"
             >
               Experience
             </Link>
           </li>
           <li className="text-white px-4 py-2">
-            <Link onClick={() => scrollToSection("project")} href="#project">
+            <Link
+              onClick={() => {
+                scrollToSection("project");
+                setNav(false);
+              }}
+              href="#project"
+            >
               projects
             </Link>
           </li>
           <li className="text-white px-4 py-2">
-            <Link onClick={() => scrollToSection("contact")} href="#contacts">
+            <Link
+              onClick={() => {
+                scrollToSection("contact");
+                setNav(false);
+              }}
+              href="#contacts"
+            >
               Contacts
             </Link>
           </li>

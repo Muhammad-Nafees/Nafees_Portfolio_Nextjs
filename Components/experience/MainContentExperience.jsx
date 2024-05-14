@@ -10,12 +10,12 @@ const MainContentExperience = () => {
       </div>
 
       <div className="py-32 pt-14 m-auto flex flex-col md:flex-row md:w-[95%] w-[80%] lg:w-[90%] md:flex justify-between items-center">
-        <div className="rounded-xl border sm:w-[60%] md:w-[47%] h-96">
+        <div className="hover:-translate-y-2 transition duration-300 ease-in-out  rounded-xl border sm:w-[60%] md:w-[47%] md:h-96">
           <h1 className="font-bold pt-3 text-xl text-center">
             Frontend development
           </h1>
 
-          <div className="pt-4 sm:w-[90%] md:w-[96%] xl:w-[75%]  lg:w-[92%] flex-wrap m-auto flex items-center justify-between">
+          <div className="pt-4 sm:w-[90%] md:w-[96%] xl:w-[75%]   lg:w-[92%] flex-wrap m-auto flex items-center justify-between">
             <SkillsMention skill={"HTML"} experience={"Experienced"} />
             <SkillsMention skill={"CSS"} experience={"Experienced"} />
             <SkillsMention skill={"Javascript"} experience={"Experienced"} />
@@ -26,7 +26,7 @@ const MainContentExperience = () => {
           </div>
         </div>
 
-        <div className="rounded-xl my-4 md:my-0 border sm:w-[60%] md:w-[47%] h-96">
+        <div className="hover:-translate-y-2 transition duration-300 ease-in-out rounded-xl my-4 md:my-0 border sm:w-[60%] md:w-[47%] h-72 md:h-96">
           <h1 className="font-bold text-xl pt-3 text-center">
             Backend development
           </h1>
