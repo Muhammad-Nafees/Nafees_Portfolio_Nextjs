@@ -4,7 +4,7 @@ import CustomLinkButton from "../reusable_components/CustomLinkButton";
 const ProjectsCard = ({ text, source, alt, hrefParent }) => {
   // h-[80%] w-[50%]
   return (
-    <div className="borderProjectsColor border-[1px] bg-backgroundProjectsColor pb-6 px-14 rounded-xl text-center my-4 lg:my-0 items-center justify-center ">
+    <div className="borderProjectsColor border-[1px] bg-backgroundProjectsColor pb-6 px-12 rounded-xl text-center my-4 lg:my-0 items-center justify-center ">
       <div className="lg:w-full lg:h-full w-5/5 flex justify-center items-center p-4">
         <Image
           alt={alt}

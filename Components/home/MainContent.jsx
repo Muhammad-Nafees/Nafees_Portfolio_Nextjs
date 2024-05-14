@@ -4,7 +4,8 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { easeIn, easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
+
 import CustomlinkButton from "../reusable_components/CustomLinkButton";
 
 const MainContent = () => {
@@ -38,12 +39,16 @@ const MainContent = () => {
       behavior: "smooth",
     });
   };
-  // xl:w-9/12 lg:w-8/12 md:w-11/12
+
+  // xl:w-9/12 lg:w-8/12 md:w-11/12-----
+
   return (
     <div className="flex justify-center items-center py-32">
       <div className="px-10 md:flex items-center justify-between lg:space-x-16">
-        <motion.div 
-          whileHover={{ scale: 1.05, }}
+        {/* <motion.div style={{ scaleX: scrollYProgress ,}} /> */}
+
+        <motion.div
+          whileHover={{ scale: 1.05 }}
           className="w-250 h-250 flex items-center justify-center"
         >
           <Image
@@ -56,7 +61,9 @@ const MainContent = () => {
         </motion.div>
 
         <div className="lg:pt-0 pt-8 px-4 flex flex-col justify-center items-center">
-          <p className="py-1 sm:text-0x1 font-semibold text-greyMain">Hello,i'm </p>
+          <p className="py-1 sm:text-0x1 font-semibold text-greyMain">
+            Hello,i'm{" "}
+          </p>
           <h3 className="py-1 font-bold sm:text-2xl text-[#000000]">
             Muhammad Nafees
           </h3>
@@ -85,7 +92,10 @@ const MainContent = () => {
           </div>
 
           <div className="flex pt-4 space-x-4">
-            <Link target="_blank" href="https://www.linkedin.com/in/muhammad-nafees2002">
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/muhammad-nafees2002"
+            >
               <BsLinkedin fontSize={24} />
             </Link>
             <Link target="_blank" href={"https://github.com/Muhammad-Nafees"}>

@@ -1,23 +1,47 @@
 "use client";
-import React from "react";
-import { contactFormSchema } from "../../validation/validation";
-import CustomButton from "../reusable_components/CustomButton";
-import CustomInput from "../reusable_components/CustomInput";
-import { Formik } from "formik";
 
-  
+// imports libraries
+import React, { useState } from "react";
+import { Formik } from "formik";
+import { MdError } from "react-icons/md";
+// form schema
+import { contactFormSchema } from "../../validation/validation";
+import emailjs from "@emailjs/browser";
+// imports components
+import CustomInput from "../reusable_components/CustomInput";
+import FixHeight from "../shared-components/Fixheight";
+import CustomButton from "../reusable_components/CustomButton";
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "../../app/constant";
 
 const MainContentContact = () => {
-
   const initialValues = {
     username: "",
     email: "",
-    password: "",
-    description: "",
+    message: "",
+  };
+
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleInputFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsFocused(false);
   };
 
   const handleSubmitFunc = async (values) => {
-    console.log("🚀 ~ handleSubmitFunc ~ values:", values);
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, values, PUBLIC_KEY)
+      .then((response) => {
+        alert("Thanks For your message,i will get back to you soon.");
+        console.log("🚀 ~ emailjs.send ~ response:", response);
+      })
+      .catch((error) => {
+        console.log("🚀 ~ emailjs.send ~ error:", error);
+      });
+
+    console.log("🚀 ~ handleSubmitFunc ~ values:");
   };
 
   return (
@@ -25,9 +49,7 @@ const MainContentContact = () => {
       <Formik
         initialValues={initialValues}
         validationSchema={contactFormSchema}
-        onSubmit={() => {
-          console.log("🚀 ~ handleSubmitFunc ~ values:");
-        }}
+        onSubmit={handleSubmitFunc}
       >
         {({
           errors,
@@ -43,7 +65,7 @@ const MainContentContact = () => {
               <h1 className="text-blackMain font-bold text-4xl">Contact Me</h1>
             </div>
 
-            <div className="py-12">
+            <div className="pt-12">
               <form onSubmit={handleSubmit}>
                 <CustomInput
                   placeHolder={"username"}
@@ -65,30 +87,29 @@ const MainContentContact = () => {
                   onBlur={handleBlur}
                 />
 
-                <CustomInput
-                  placeHolder={"password"}
-                  value={values.password}
-                  error={errors.password}
-                  touched={touched.password}
-                  id={"password"}
-                  onChangeInputValue={handleChange("password")}
-                  onBlur={handleBlur}
-                />
-
-                <div className="w-5/12 m-auto">
+                <div className="w-9/12 sm:w-6/12 m-auto">
                   <div className="border border-gray-500 py-2 rounded-lg">
                     <textarea
                       placeholder={"Type Your Message"}
-                      value={values.description}
-                      onChange={handleChange("description")}
-                      onBlur={handleBlur}
-                      id={"description"}
+                      value={values.message}
+                      onChange={handleChange("message")}
+                      onFocus={handleInputFocus}
+                      onBlur={handleInputBlur}
+                      id={"message"}
                       className="pl-3 h-32 bg-transparent border-none outline-none w-11/12 resize-none"
                     />
                   </div>
 
-                  {errors.description && touched.description && (
-                    <p className="text-red-600">{errors.description}</p>
+                  {errors.message &&
+                  ((touched.message && !values.message) ||
+                    (errors.message && values.message) ||
+                    isFocused) ? (
+                      <div className="py-2 flex items-center">
+                        <MdError size={21} color="red"/> 
+                         <p className="text-red-600 text-sm px-1">{errors.message}</p>
+                      </div>
+                  ) : (
+                    <FixHeight />
                   )}
                 </div>
               </form>
@@ -100,6 +121,12 @@ const MainContentContact = () => {
                   extraStyle="hover:bg-black hover:text-white border text-black border-black w-28 text-sm sm:text-base sm:w-36 h-12 text-center justify-center items-center flex m-auto py-2 px-4 rounded-full transition duration-200 ease-in"
                 />
               </div>
+
+              <div className="py-2 pt-20">
+                  <p className="text-center px-5 text-sm sm:text-base font-normal">Copyright © 2024 Muhammad Nafees Ahmed. All Rights Reserved.</p>
+              </div>
+
+
             </div>
           </>
         )}

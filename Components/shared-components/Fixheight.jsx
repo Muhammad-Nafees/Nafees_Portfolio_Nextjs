@@ -1,6 +1,6 @@
 const FixHeight=() =>{
 return(
-    <div className="h-6">
+    <div className="py-3">
     </div>
 )
 
