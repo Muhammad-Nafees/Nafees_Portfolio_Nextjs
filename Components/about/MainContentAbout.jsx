@@ -1,23 +1,27 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 const MainContentAbout = () => {
   return (
-    <div className="">
       <div className="py-20 w-full m-auto lg:flex justify-between items-center lg:w-10/12">
-        <div className="w-4/5 h-4/5 sm:w-2/5 m-auto flex items-center justify-center">
-          <Image
-            src="/Nafees_Image.jpg"
-            alt="Nafees Image"
-            width={400}
-            height={400}
-            className="rounded-xl"
-          />
-        </div>
+ <div
+      whileHover={{ scale: 1.05 }}
+      className="hover:translate-y-1 transition duration-300 ease-in-out w-4/5 h-4/5 sm:w-2/5 m-auto flex items-center justify-center"
+    >
+      <Image
+        src="/Nafees_Image.jpg"
+        alt="Nafees Image"
+        width={400}
+        height={400}
+        className="rounded-xl"
+      />
+    </div>
 
         <div className="px-8 lg:w-10/12">
           <div className="py-10 pb-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center">
-            <div className="border px-12 h-36 rounded-3xl flex flex-col justify-center items-center">
+            <div className="hover:-translate-y-0.5 transition duration-300 ease-in-out border px-12 h-36 rounded-3xl flex flex-col justify-center items-center">
               <Image
                 width={25}
                 alt="experience img"
@@ -31,7 +35,7 @@ const MainContentAbout = () => {
               </p>
             </div>
             {/* w-11/12 sm:w-7/12 lg:w-7/12 */}
-            <div className="border px-20 h-36 rounded-3xl flex flex-col justify-center items-center">
+            <div className="hover:-translate-y-0.5 transition duration-300 ease-in-out border px-20 h-36 rounded-3xl flex flex-col justify-center items-center">
               <Image
                 width={25}
                 alt="experience img"
@@ -55,7 +59,6 @@ const MainContentAbout = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

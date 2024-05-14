@@ -5,33 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
-
+// imports custom commponents
 import CustomlinkButton from "../reusable_components/CustomLinkButton";
 
 const MainContent = () => {
-  // const handleDownload = () => {
-  //   const applySlice = {
-  //     one: 1,
-  //     two: 2,
-  //     three: 3,
-  //     four: 4,
-  //     five: 5,
-  //     six: 6,
-  //     seven: 7,
-  //     eight: 8,
-  //     nine: 9,
-  //   };
-
-  //   for (const value in applySlice) {
-  //     if (applySlice.hasOwnProperty(value)) {
-  //       if (value === 1) {
-  //         console.log("ONE PROPERTY_______");
-  //       }
-  //       console.log("VALUE__________", applySlice[value]);
-  //     }
-  //   }
-  // };
-
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     window.scrollTo({
@@ -40,13 +17,10 @@ const MainContent = () => {
     });
   };
 
-  // xl:w-9/12 lg:w-8/12 md:w-11/12-----
-
   return (
     <div className="flex justify-center items-center py-32">
       <div className="px-10 md:flex items-center justify-between lg:space-x-16">
         {/* <motion.div style={{ scaleX: scrollYProgress ,}} /> */}
-
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="w-250 h-250 flex items-center justify-center"

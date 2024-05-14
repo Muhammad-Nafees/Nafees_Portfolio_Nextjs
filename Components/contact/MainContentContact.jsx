@@ -2,6 +2,7 @@
 
 // imports libraries
 import React, { useState } from "react";
+import toast, { ToastBar, Toaster } from "react-hot-toast";
 import { Formik } from "formik";
 import { MdError } from "react-icons/md";
 // form schema
@@ -30,18 +31,20 @@ const MainContentContact = () => {
     setIsFocused(false);
   };
 
-  const handleSubmitFunc = async (values) => {
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, values, PUBLIC_KEY)
-      .then((response) => {
-        alert("Thanks For your message,i will get back to you soon.");
-        console.log("🚀 ~ emailjs.send ~ response:", response);
-      })
-      .catch((error) => {
-        console.log("🚀 ~ emailjs.send ~ error:", error);
-      });
-
-    console.log("🚀 ~ handleSubmitFunc ~ values:");
+  const handleSubmitFunc = async (values, actions) => {
+    try {
+      const response = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        values,
+        PUBLIC_KEY
+      );
+      actions.resetForm();
+    toast.success("Thanks For your message,i will get back to you soon.");
+      console.log("🚀 ~ emailjs.send ~ response:", response);
+    } catch (error) {
+      console.log("🚀 ~ emailjs.send ~ error:", error);
+    }
   };
 
   return (
@@ -87,6 +90,7 @@ const MainContentContact = () => {
                   onBlur={handleBlur}
                 />
 
+
                 <div className="w-9/12 sm:w-6/12 m-auto">
                   <div className="border border-gray-500 py-2 rounded-lg">
                     <textarea
@@ -100,14 +104,17 @@ const MainContentContact = () => {
                     />
                   </div>
 
+
                   {errors.message &&
                   ((touched.message && !values.message) ||
                     (errors.message && values.message) ||
                     isFocused) ? (
-                      <div className="py-2 flex items-center">
-                        <MdError size={21} color="red"/> 
-                         <p className="text-red-600 text-sm px-1">{errors.message}</p>
-                      </div>
+                    <div className="py-2 flex items-center">
+                      <MdError size={21} color="red" />
+                      <p className="text-red-600 text-sm px-1">
+                        {errors.message}
+                      </p>
+                    </div>
                   ) : (
                     <FixHeight />
                   )}
@@ -123,10 +130,10 @@ const MainContentContact = () => {
               </div>
 
               <div className="py-2 pt-20">
-                  <p className="text-center px-5 text-sm sm:text-base font-normal">Copyright © 2024 Muhammad Nafees Ahmed. All Rights Reserved.</p>
+                <p className="text-center px-5 text-sm sm:text-base font-normal">
+                  Copyright © 2024 Muhammad Nafees Ahmed. All Rights Reserved.
+                </p>
               </div>
-
-
             </div>
           </>
         )}
