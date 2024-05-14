@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
-  console.log("🚀 ~ HeaderTop ~ nav:", nav);
 
   const navbarHandle = () => {
     setNav(!nav);
@@ -21,7 +20,6 @@ const HeaderTop = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-    // Cleanup function to reset body overflow when component unmounts
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -29,6 +27,7 @@ const HeaderTop = () => {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    console.log("🚀 ~ scrollToSection ~ section:", section)
     window.scrollTo({
       top: section.offsetTop,
       behavior: "smooth",
@@ -67,7 +66,7 @@ const HeaderTop = () => {
           </ul>
         </nav>
 
-        <div onClick={navbarHandle} className="md:hidden z-10">
+        <div onClick={navbarHandle} className="md:hidden z-10 p-1 ">
           {nav ? (
             <AiOutlineClose color="white" />
           ) : (
@@ -84,51 +83,22 @@ const HeaderTop = () => {
               : "md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex flex-col ease-in duration-300 bg-black h-screen w-full justify-center items-center"
           }
         >
-          <li className="text-white  px-4 py-2">
-            <Link
-              onClick={() => {
-                scrollToSection("/");
-                setNav(false);
-              }}
-              href="#/"
-            >
-              About
-            </Link>
-          </li>
-
-          <li className="text-white  px-4 py-2">
-            <Link
-              onClick={() => {
-                scrollToSection("experience");
-                setNav(false);
-              }}
-              href="#exprience"
-            >
-              Experience
-            </Link>
-          </li>
-          <li className="text-white px-4 py-2">
-            <Link
-              onClick={() => {
-                scrollToSection("project");
-                setNav(false);
-              }}
-              href="#project"
-            >
-              projects
-            </Link>
-          </li>
-          <li className="text-white px-4 py-2">
-            <Link
-              onClick={() => {
-                scrollToSection("contact");
-                setNav(false);
-              }}
-              href="#contacts"
-            >
-              Contacts
-            </Link>
-          </li>
+          {navbarData.map((value, index) => (
+            <li key={index} className="text-white text-lg py-2 w-8/12">
+              <motion.div whileHover={{scale:1}} className="bg-red-400 text-center py-2 rounded-full">
+                <Link
+                  className="text-base text-center px-16 py-1"
+                  onClick={() => {
+                    scrollToSection(value.scrollSectionName);
+                    setNav(false);
+                  }}
+                  href={value.href}
+                >
+                  {value.name}
+                </Link>
+              </motion.div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
