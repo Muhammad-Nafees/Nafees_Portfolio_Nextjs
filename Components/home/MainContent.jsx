@@ -47,7 +47,7 @@ const MainContent = () => {
 
           <div className="flex py-4 space-x-4">
             <CustomlinkButton
-              href={"./MuhammadResume-upd.pdf"}
+              href={"./MuhammadNafeesAhmed'sResume.pdf"}
               alt={"my cv"}
               target={"_blank"}
               extraStyle={

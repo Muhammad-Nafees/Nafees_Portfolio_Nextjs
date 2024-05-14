@@ -4,15 +4,16 @@ import MainContentAbout from "../Components/about/MainContentAbout";
 import MainContentExperience from "../Components/experience/MainContentExperience";
 import MainContentContact from "../Components/contact/MainContentContact";
 import MainContentProject from "../Components/projects/MainContentProject";
+import HeaderTop from "../Components/home/HeaderTop";
 
 const Home = () => {
   return (
     <>
-      <main className="h-screen">
+      <main className="bg-[#FBFBFB] overflow-x-hidden ">
         <section
-          id="/"
-          className="sm:flex sm:flex-col justify-center "
+          className=""
         >
+          <HeaderTop />
           <MainContent />
         </section>
         <section id="about" className="">

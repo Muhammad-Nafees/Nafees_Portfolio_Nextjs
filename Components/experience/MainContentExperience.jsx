@@ -4,12 +4,12 @@ import SkillsMention from "../reusable_components/SkillsMention";
 const MainContentExperience = () => {
   return (
     <>
-      <div className="pt-20 flex flex-col justify-center items-center">
+      <div className="pt-2 flex flex-col justify-center items-center">
         <p className="text-gray-500 text-sm py-2">Explore My</p>
         <h1 className="text-blackMain font-bold text-4xl">Experience</h1>
       </div>
 
-      <div className="py-32 pt-14 m-auto flex flex-col md:flex-row md:w-[95%] w-[80%] lg:w-[90%] md:flex justify-between items-center">
+      <div className="pt-14 m-auto flex flex-col md:flex-row md:w-[95%] w-[80%] lg:w-[90%] md:flex justify-between items-center">
         <div className="hover:-translate-y-2 transition duration-300 ease-in-out  rounded-xl border sm:w-[60%] md:w-[47%] md:h-96">
           <h1 className="font-bold pt-3 text-xl text-center">
             Frontend development
