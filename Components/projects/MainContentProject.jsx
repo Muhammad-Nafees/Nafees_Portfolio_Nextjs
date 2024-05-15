@@ -10,7 +10,7 @@ const MainContentProject = () => {
         <p className="text-gray-500 text-sm py-2">Explore My</p>
         <h1 className="text-blackMain font-bold text-4xl">Projects</h1>
       </div>
-      <div className=" lg:flex w-8/12 lg:w-4/5 lg:space-x-8 justify-around items-center m-auto">
+      <div className=" lg:flex w-9/12 lg:w-4/5 lg:space-x-8 justify-around items-center m-auto">
         <ProjectsCard
           source={require("../../public/feedaGpt.webp")}
           alt={"Feeda GPT"}
