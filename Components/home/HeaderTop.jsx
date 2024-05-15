@@ -82,9 +82,9 @@ const HeaderTop = () => {
         >
           {navbarData.map((value, index) => (
             <li key={index} className="text-white text-lg py-2 w-8/12">
-              <div whileHover={{scale:1}} className="bg-red-400 text-center py-2 rounded-full">
+              <div whileHover={{scale:1}} className="bg-[#FBFBFB] text-center py-2 rounded-full">
                 <Link
-                  className="text-base text-center px-16 py-1"
+                  className="text-base text-black text-center px-16 py-1"
                   onClick={() => {
                     scrollToSection(value.scrollSectionName);
                     setNav(false);
