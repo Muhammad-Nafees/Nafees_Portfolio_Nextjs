@@ -28,10 +28,7 @@ const HeaderTop = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     console.log("🚀 ~ scrollToSection ~ section:", section)
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: "smooth",
-    });
+    section?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   };
 
   return (
@@ -85,7 +82,7 @@ const HeaderTop = () => {
         >
           {navbarData.map((value, index) => (
             <li key={index} className="text-white text-lg py-2 w-8/12">
-              <motion.div whileHover={{scale:1}} className="bg-red-400 text-center py-2 rounded-full">
+              <div whileHover={{scale:1}} className="bg-red-400 text-center py-2 rounded-full">
                 <Link
                   className="text-base text-center px-16 py-1"
                   onClick={() => {
@@ -96,7 +93,7 @@ const HeaderTop = () => {
                 >
                   {value.name}
                 </Link>
-              </motion.div>
+              </div>
             </li>
           ))}
         </ul>
