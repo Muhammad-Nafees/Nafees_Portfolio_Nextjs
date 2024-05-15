@@ -11,10 +11,7 @@ import CustomlinkButton from "../reusable_components/CustomLinkButton";
 const MainContent = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: "smooth",
-    });
+    section?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   };
 
   return (
