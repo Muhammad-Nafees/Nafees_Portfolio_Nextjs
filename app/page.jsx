@@ -9,7 +9,7 @@ import HeaderTop from "../Components/home/HeaderTop";
 const Home = () => {
   return (
     <>
-      <main className="bg-[#FBFBFB] overflow-x-hidden ">
+      <main className="bg-[#FBFBFB] overflow-x-hidden">
         <section
           className=""
         >
