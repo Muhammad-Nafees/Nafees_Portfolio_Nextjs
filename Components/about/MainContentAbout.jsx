@@ -49,12 +49,13 @@ const MainContentAbout = () => {
 
         <div className="w-6/6flex justify-center items-center sm:block">
           <p className="text-black font-medium text-sm lg:text-sm xl:text-base">
-            I am well-known for my great problem-solving abilities and
-            commitment to client satisfaction, and I have proficiency in
-            JavaScript, Node JS, React JS, and React Native. I am devoted to
-            providing highquality software solutions that surpass expectations,
-            and I have a track record of effectively managing projects under
-            tight deadlines.
+            I am a passionate React Native developer with over a year of
+            experience in the field. I have successfully designed and developed
+            several apps, with 2 to 3 of them currently live on the Play Store.
+            My strong skills in both design and development enable me to create
+            seamless, user-friendly mobile applications. I am dedicated to
+            continuous learning and improvement, always striving to deliver
+            high-quality results in every project I undertake
           </p>
         </div>
       </div>
