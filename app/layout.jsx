@@ -1,10 +1,13 @@
 
-import { Inter, Raleway } from "next/font/google";
+import { Inter, Raleway,Poppins } from "next/font/google";
 import "./globals.css";
 import HeaderTop from "../Components/home/HeaderTop";
 import { Toaster } from "react-hot-toast";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({ 
+  subsets: ["latin"],
+  // weight:"300"
+ });
 
 export const metadata = {
   title: "Nafees Ahmed Portfolio",

@@ -23,7 +23,7 @@ const MainContent = () => {
           className="w-250 h-250 flex items-center justify-center"
         >
           <Image
-            src="/Nafees_Image.jpg"
+            src="/Nafees_Image.jpeg"
             alt="Nafees Image"
             width={320}
             height={320}

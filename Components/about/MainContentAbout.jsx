@@ -9,7 +9,7 @@ const MainContentAbout = () => {
         className="hover:translate-y-1 transition duration-300 ease-in-out w-4/5 h-4/5 sm:w-2/5 m-auto flex items-center justify-center"
       >
         <Image
-          src="/Nafees_Image.jpg"
+          src="/Nafees_Image.jpeg"
           alt="Nafees Image"
           width={400}
           height={400}
@@ -27,7 +27,7 @@ const MainContentAbout = () => {
               src={require("../../public/experience.png")}
             />
             <p className="text-black font-bold">Experience</p>
-            <p className="text-black">1 to 2 years</p>
+            <p className="text-black">2+ years</p>
             <p className="text-black lg:text-sm xl:text-base text-sm text-center">
               Mobile Application development
             </p>
