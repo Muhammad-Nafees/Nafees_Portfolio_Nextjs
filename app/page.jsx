@@ -10,9 +10,7 @@ const Home = () => {
   return (
     <>
       <main className="bg-[#FBFBFB] overflow-x-hidden">
-        <section
-          className=""
-        >
+        <section className="">
           <HeaderTop />
           <MainContent />
         </section>

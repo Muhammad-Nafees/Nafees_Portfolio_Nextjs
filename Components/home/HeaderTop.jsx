@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { navbarData } from "./../../app/data/navbardata";
 import { motion } from "framer-motion";
+import { Inter, Raleway,Poppins } from "next/font/google";
+
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
@@ -32,8 +34,8 @@ const HeaderTop = () => {
   };
 
   return (
-    <div className="px-8 justify-center flex pt-5">
-      <div className="header_top">
+    <div className="px-8 justify-center flex pt-5 ">
+      <div className="header_top ">
         <div className="flex items-center">
           <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
             <h2 className="font-serif text-white">N</h2>

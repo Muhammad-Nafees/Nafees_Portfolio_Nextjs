@@ -40,7 +40,7 @@ const MainContentContact = () => {
         PUBLIC_KEY
       );
       actions.resetForm();
-    toast.success("Thanks For your message,i will get back to you soon.");
+      toast.success("Thanks For your message,i will get back to you soon.");
       console.log("🚀 ~ emailjs.send ~ response:", response);
     } catch (error) {
       console.log("🚀 ~ emailjs.send ~ error:", error);
@@ -90,7 +90,6 @@ const MainContentContact = () => {
                   onBlur={handleBlur}
                 />
 
-
                 <div className="w-9/12 sm:w-6/12 m-auto">
                   <div className="border border-gray-500 py-2 rounded-lg">
                     <textarea
@@ -103,7 +102,6 @@ const MainContentContact = () => {
                       className="pl-3 h-32 bg-transparent border-none outline-none w-11/12 resize-none"
                     />
                   </div>
-
 
                   {errors.message &&
                   ((touched.message && !values.message) ||
