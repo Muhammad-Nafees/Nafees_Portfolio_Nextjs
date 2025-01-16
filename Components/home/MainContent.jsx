@@ -15,9 +15,10 @@ const MainContent = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-32">
-      <div className="px-10 md:flex items-center justify-between lg:space-x-16">
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="px-8 md:flex items-center justify-between  lg:gap-72">
         {/* <motion.div style={{ scaleX: scrollYProgress ,}} /> */}
+
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="w-250 h-250 flex items-center justify-center"
@@ -31,7 +32,7 @@ const MainContent = () => {
           />
         </motion.div>
 
-        <div className="lg:pt-0 pt-8 px-4 flex flex-col justify-center items-center">
+        <div className="lg:pt-0 pt-8 flex flex-col justify-center items-center">
           <p className="py-1 sm:text-0x1 font-semibold text-greyMain">
             Hello,i'm{" "}
           </p>
@@ -41,6 +42,7 @@ const MainContent = () => {
           <h4 className="py-1 sm:text-3xl text-greyMain md:text-center text-center">
             Mobile Application developer
           </h4>
+
 
           <div className="flex py-4 space-x-4">
             <CustomlinkButton

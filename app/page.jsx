@@ -9,22 +9,22 @@ import HeaderTop from "../Components/home/HeaderTop";
 const Home = () => {
   return (
     <>
-      <main className="bg-[#FBFBFB] overflow-x-hidden">
-        <section className="">
+      <main className="bg-[#FBFBFB]">
+        <section className="min-h-screen ">
           <HeaderTop />
           <MainContent />
         </section>
-        <section id="about" className="">
+        <section id="about" className="min-h-screen">
           <HeaderAbout />
           <MainContentAbout />
         </section>
-        <section id="experience" className="">
+        <section id="experience" className="min-h-screen">
           <MainContentExperience />
         </section>
-        <section id="project" className="">
+        <section id="project" className="min-h-screen">
           <MainContentProject />
         </section>
-        <section id="contact" className="">
+        <section id="contact" className="pb-8">
           <MainContentContact />
         </section>
       </main>
@@ -32,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  

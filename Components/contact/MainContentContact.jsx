@@ -104,9 +104,9 @@ const MainContentContact = () => {
                   </div>
 
                   {errors.message &&
-                  ((touched.message && !values.message) ||
-                    (errors.message && values.message) ||
-                    isFocused) ? (
+                    ((touched.message && !values.message) ||
+                      (errors.message && values.message) ||
+                      isFocused) ? (
                     <div className="py-2 flex items-center">
                       <MdError size={21} color="red" />
                       <p className="text-red-600 text-sm px-1">
