@@ -49,7 +49,7 @@ const MainContentAbout = () => {
 
         </div>
 
-        <div className="w-[80%] sm:mx-auto lg:mx-0 flex items-center justify-center lg:justify-start lg:items-start sm:block">
+        <div className="w-[100%] sm:w-[80%] sm:mx-auto lg:mx-0 flex items-center justify-center lg:justify-start lg:items-start sm:block">
           <p className="text-black font-medium text-sm lg:text-sm xl:text-base">
             I am a passionate React Native developer with over a year of
             experience in the field. I have successfully designed and developed
