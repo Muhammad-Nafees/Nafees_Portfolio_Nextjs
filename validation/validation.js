@@ -4,7 +4,7 @@ export const contactFormSchema = Yup.object().shape({
   username: Yup.string()
     .min(3, "Too Short")
     .max(50, "Too Long!")
-    .required("name is required"),
+    .required("Name is required"),
   email: Yup.string()
     .email("Invalid email")
     .required("Email is required")

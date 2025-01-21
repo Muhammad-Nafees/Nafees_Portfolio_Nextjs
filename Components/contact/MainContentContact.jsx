@@ -40,7 +40,7 @@ const MainContentContact = () => {
         PUBLIC_KEY
       );
       actions.resetForm();
-    toast.success("Thanks For your message,i will get back to you soon.");
+      toast.success("Thanks For your message,i will get back to you soon.");
       console.log("🚀 ~ emailjs.send ~ response:", response);
     } catch (error) {
       console.log("🚀 ~ emailjs.send ~ error:", error);
@@ -90,7 +90,6 @@ const MainContentContact = () => {
                   onBlur={handleBlur}
                 />
 
-
                 <div className="w-9/12 sm:w-6/12 m-auto">
                   <div className="border border-gray-500 py-2 rounded-lg">
                     <textarea
@@ -104,11 +103,10 @@ const MainContentContact = () => {
                     />
                   </div>
 
-
                   {errors.message &&
-                  ((touched.message && !values.message) ||
-                    (errors.message && values.message) ||
-                    isFocused) ? (
+                    ((touched.message && !values.message) ||
+                      (errors.message && values.message) ||
+                      isFocused) ? (
                     <div className="py-2 flex items-center">
                       <MdError size={21} color="red" />
                       <p className="text-red-600 text-sm px-1">

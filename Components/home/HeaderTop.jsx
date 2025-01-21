@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { navbarData } from "./../../app/data/navbardata";
 import { motion } from "framer-motion";
+import { Inter, Raleway,Poppins } from "next/font/google";
+
 
 const HeaderTop = () => {
   const [nav, setNav] = useState(false);
@@ -28,15 +30,12 @@ const HeaderTop = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     console.log("🚀 ~ scrollToSection ~ section:", section)
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: "smooth",
-    });
+    section?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   };
 
   return (
-    <div className="px-8 justify-center flex pt-5">
-      <div className="header_top">
+    <div className="px-8 justify-center flex pt-5 ">
+      <div className="header_top ">
         <div className="flex items-center">
           <div className="w-8 h-8 mx-2.5 bg-blackMain flex justify-center items-center">
             <h2 className="font-serif text-white">N</h2>
@@ -85,9 +84,9 @@ const HeaderTop = () => {
         >
           {navbarData.map((value, index) => (
             <li key={index} className="text-white text-lg py-2 w-8/12">
-              <motion.div whileHover={{scale:1}} className="bg-red-400 text-center py-2 rounded-full">
+              <div whileHover={{scale:1}} className="bg-[#FBFBFB] text-center py-2 rounded-full">
                 <Link
-                  className="text-base text-center px-16 py-1"
+                  className="text-base text-black text-center px-16 py-1"
                   onClick={() => {
                     scrollToSection(value.scrollSectionName);
                     setNav(false);
@@ -96,7 +95,7 @@ const HeaderTop = () => {
                 >
                   {value.name}
                 </Link>
-              </motion.div>
+              </div>
             </li>
           ))}
         </ul>
