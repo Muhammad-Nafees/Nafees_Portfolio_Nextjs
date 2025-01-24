@@ -7,6 +7,9 @@ import MainContentProject from "../Components/projects/MainContentProject";
 import HeaderTop from "../Components/home/HeaderTop";
 
 const Home = () => {
+
+
+  
   return (
     <>
       <main className="bg-[#FBFBFB]">
